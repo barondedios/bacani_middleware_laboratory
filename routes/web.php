@@ -16,13 +16,14 @@ Route::get('/user-page', function () {
     return view('user-page');
 })->middleware('is_admin');
 
-// Check Age Middleware
-Route::get('/{age}', function($age){
-    return "You are allowed to access the page. Your age is: $age";
-})->middleware('AgeCheckMiddleware');
+// Check Age Middleware (nagloloko pag naka on kasabay ng ibang codes nauna ko po kasi tong ginawa)
+// Basically, if below 18 ung age denied, then kapag above 18 access granted.
+
+// Route::get('/{age}', function($age){
+//     return "You are allowed to access the page. Your age is: $age";
+// })->middleware('AgeCheckMiddleware');
 
 // For Global Middleware, check App/Http/Middleware/LogHttpRequest.php
-
 
 // Laravel Breeze Starter Kit
 
